@@ -4,7 +4,7 @@ metadata:
   name: hello-world-pv
 spec:
   capacity:
-    storage: 2Gi
+    storage: 3Gi
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
