@@ -18,4 +18,4 @@ spec:
             - key: kubernetes.io/hostname
               operator: In
               values:
-                - my-node-name # <== Replace this with your node name
+                - arman-worker-0 # <== Replace this with your node name
