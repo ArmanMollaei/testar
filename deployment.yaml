@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world
-  labels:Add commentMore actions
+  labels:
     app: hello-world
 spec:
   replicas: 1
