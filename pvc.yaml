@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: hello-world-pvc
+  name: hello-world-pvc2
 spec:
   accessModes:
     - ReadWriteOnce
