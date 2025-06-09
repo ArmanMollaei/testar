@@ -1,30 +1,10 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: velero.io/v1
+kind: Backup
 metadata:
-  name: hello-world
-  labels:
-    app: hello-world
+  name: my-test-backup
+  namespace: velero  # or your velero namespace (e.g. platform-disaster-recovery)
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: hello-world
-  template:
-    metadata:
-      labels:
-        app: hello-world
-    spec:
-      containers:
-      - name: hello-world
-        image: hashicorp/http-echo
-        args:
-          - "-text=Hello, from PVC!"
-        ports:
-        - containerPort: 5678
-        volumeMounts:
-        - name: hello-world-storage
-          mountPath: /data
-      volumes:
-      - name: hello-world-storage
-        persistentVolumeClaim:
-          claimName: hello-world-pvc
+  includedNamespaces:
+    - default
+  storageLocation: default
+  ttl: 72h0m0s
