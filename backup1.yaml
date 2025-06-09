@@ -1,7 +1,7 @@
 apiVersion: velero.io/v1
 kind: Backup
 metadata:
-  name: my-test-backup
+  name: my-test-backup1
   namespace: velero  # or your velero namespace (e.g. platform-disaster-recovery)
 spec:
   includedNamespaces:
